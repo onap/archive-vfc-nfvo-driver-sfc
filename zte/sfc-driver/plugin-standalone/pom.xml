@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>org.openo.nfvo.sfc-driver-parent</groupId>
+        <artifactId>sfc-driver-parent</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.openo.nfvo.sfc-driver-standalone</groupId>
+    <artifactId>nfvo-drivers-sdnc-zte-sfc-driver</artifactId>
+    <name>nfvo/drivers/sdnc/zte/sfc-driver/plugin-standalone</name>
+    <packaging>pom</packaging>
+    <version>1.1.0-SNAPSHOT</version>
+    
+    <dependencies>
+        <dependency>
+        <groupId>org.openo.nfvo.sfc-driver</groupId>
+        <artifactId>sfc-driver</artifactId>
+        <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    
+    <properties>
+        <packagename>sfc-driver</packagename>
+    </properties>  
+	<build>
+	
+	<plugins>    
+    <plugin>
+    <artifactId>maven-resources-plugin</artifactId>
+    <executions>
+      <execution>
+        <id>copy-resources</id>                 
+        <phase>process-resources</phase>
+        <goals>
+          <goal>copy-resources</goal>
+        </goals>
+        <configuration>
+          <outputDirectory>${basedir}/target/assembly/</outputDirectory>
+          <resources>           
+            <resource>
+              <directory>src/main/assembly/</directory>
+              <filtering>false</filtering>
+              <includes>
+                <include>**/*</include>
+              </includes>
+            </resource>   
+      
+          </resources>
+          <overwrite>true</overwrite>
+        </configuration>
+      </execution>
+      
+    </executions>
+  </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
+                <executions>                   
+                    <execution>
+                        <id>copy-jar</id>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.openo.nfvo.sfc-driver</groupId>
+                                    <artifactId>sfc-driver</artifactId>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>target/assembly/</outputDirectory>
+                                    <destFileName>sfc-service.jar</destFileName>
+                                </artifactItem>                             
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>zip</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks name="${project.artifactId}">
+                                <zip destfile="target/nfvo-drivers-sdnc-zte-sfc-driver-${project.version}.zip" update="true">
+                                <zipfileset dir="target/assembly" includes="**"/>
+                                </zip>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>target/nfvo-drivers-sdnc-zte-sfc-driver-${project.version}.zip</file>
+                                    <type>zip</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+<!--<plugin>                
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>deploy-zip-file</id>
+            <phase>deploy</phase>   
+            <configuration>  
+               <groupId>${deploy.nfv.groupid}</groupId>
+               <artifactId>${uepPackageid}</artifactId>
+               <version>${project.version}</version>
+               <packaging>zip</packaging>
+               <file>target/${uepPackageid}-${project.version}.zip</file>
+           </configuration>                    
+       </execution>            
+   </executions>   
+</plugin>-->
+ 
+
+        </plugins>
+    </build>
+</project>
