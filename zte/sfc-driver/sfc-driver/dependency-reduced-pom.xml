@@ -21,14 +21,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <artifactId>sfc-driver-parent</artifactId>
-    <groupId>com.zte.ums.sfc.components.sfc-driver</groupId>
-    <version>1.15.10.B2-SNAPSHOT</version>
+    <groupId>org.onap.nfvo.sfc-driver-parent</groupId>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.zte.ums.sfc.components.sfc-driver</groupId>
+  <groupId>org.onap.nfvo.sfc.components.sfc-driver</groupId>
   <artifactId>sfc-driver</artifactId>
   <name>sdno/20.components/sfc-driver</name>
-  <version>1.15.10.B2-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>
