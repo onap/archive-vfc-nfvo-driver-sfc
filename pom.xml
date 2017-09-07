@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-    Copyright 2016-2017 ZTE Corporation.
+    Copyright 2017 ZTE Corporation.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -18,18 +18,17 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-      <groupId>org.onap.vfc.nfvo.driver.sfc.root</groupId>
-      <artifactId>sfc-driver-root</artifactId>
+      <groupId>org.onap.oparent</groupId>
+      <artifactId>oparent</artifactId>
       <version>1.0.0-SNAPSHOT</version>
   </parent>
 	<modelVersion>4.0.0</modelVersion>
-    <groupId>org.onap.vfc.nfvo.driver.sfc</groupId>
-       <artifactId>sfc-driver-parent</artifactId>
+    <groupId>org.onap.vfc.nfvo.driver.sfc.root</groupId>
+       <artifactId>sfc-driver-root</artifactId>
        <version>1.0.0-SNAPSHOT</version>
-       <name>vfc/nfvo/driver/sfc/zte/sfc-driver</name>
+       <name>vfc/nfvo/driver/sfc</name>
        <packaging>pom</packaging>
       <modules>
-        <module>sfc-driver</module>
-        <module>plugin-standalone</module>
+        <module>zte/sfc-driver</module>
       </modules>
 </project>
