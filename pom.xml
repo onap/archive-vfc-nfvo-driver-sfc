@@ -26,6 +26,6 @@
     <groupId>org.onap.vfc.nfvo.driver.sfc</groupId>
        <artifactId>sfc-driver-root</artifactId>
        <version>1.0.0-SNAPSHOT</version>
-       <name>vfc/nfvo/driver/sfc</name>
+       <name>vfc-nfvo-driver-sfc</name>
        <packaging>pom</packaging>
 </project>
