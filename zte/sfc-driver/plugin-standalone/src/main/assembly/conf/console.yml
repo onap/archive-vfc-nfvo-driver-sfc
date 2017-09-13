@@ -1,5 +1,5 @@
 #
-#    Copyright 2016 [ZTE] and others.
+#    Copyright 2016 ZTE Corporation.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ msbServiceUrl: http://127.0.0.1:80
 
 server:
   type: simple
-  rootPath: '/openoapi/ztesdncdriver/v1/*'
+  rootPath: '/api/ztesdncdriver/v1/*'
   applicationContextPath: /
   adminContextPath: /admin
   connector:

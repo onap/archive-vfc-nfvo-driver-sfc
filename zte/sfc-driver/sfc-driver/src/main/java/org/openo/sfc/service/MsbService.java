@@ -24,7 +24,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-@Path("/openoapi/microservices/v1/services")
+@Path("/api/microservices/v1/services")
 public interface MsbService {
     @Path("")
     @POST
