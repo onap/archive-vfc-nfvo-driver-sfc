@@ -1,5 +1,5 @@
 /**
- * Copyright 2016 ZTE Corporation.
+ * Copyright 2016 [ZTE] and others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ public class TestPortPair {
     @Test
     public void test_createportpair() throws Exception {
         PortPairReq4N portpair =new PortPairReq4N();
-        portpair.setUrl("http://127.0.0.1:80");
+        portpair.setUrl("http://127.0.0.1:8181");
         N2sReqWrapper.convertPortPair(portpair);
     }
 
