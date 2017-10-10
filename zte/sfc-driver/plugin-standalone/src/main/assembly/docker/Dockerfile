@@ -19,5 +19,6 @@ RUN wget -q -O vfc-sfcdriver-zte.zip 'https://nexus.onap.org/service/local/artif
 EXPOSE 8411
 
 WORKDIR /service
+RUN chmod +x *.sh
 RUN chmod +x docker/*.sh
 ENTRYPOINT docker/docker-entrypoint.sh
