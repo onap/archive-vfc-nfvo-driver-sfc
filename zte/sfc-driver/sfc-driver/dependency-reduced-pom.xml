@@ -22,13 +22,13 @@
   <parent>
     <artifactId>sfc-driver-parent</artifactId>
     <groupId>org.onap.vfc.nfvo.driver.sfc</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.onap.nfvo.sfc.components.sfc-driver</groupId>
   <artifactId>sfc-driver</artifactId>
   <name>sdno/20.components/sfc-driver</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>

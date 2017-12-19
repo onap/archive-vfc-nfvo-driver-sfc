@@ -12,7 +12,7 @@ ADD . /service
 WORKDIR /service
 
 # get binary zip from nexus
-RUN wget -q -O vfc-sfcdriver-zte.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vfc.nfvo.driver.sfc.zte.sfc-driver-standalone&a=vfc-nfvo-driver-sfc-zte-sfc-driver&v=LATEST&e=zip' && \
+RUN wget -q -O vfc-sfcdriver-zte.zip 'https://nexus.onap.org/service/local/artifact/maven/redirect?r=snapshots&g=org.onap.vfc.nfvo.driver.sfc.zte.sfc-driver-standalone&a=vfc-nfvo-driver-sfc-zte-sfc-driver&v=1.0.1&e=zip' && \
     unzip vfc-sfcdriver-zte.zip && \
     rm -rf vfc-sfcdriver-zte.zip
 
