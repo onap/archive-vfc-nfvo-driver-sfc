@@ -17,7 +17,7 @@ package org.onap.sfc;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.openo.sfc.utils.SfcDriverUtil;
+import org.onap.sfc.utils.SfcDriverUtil;
 
 public class TestAuthorization {
     @Test

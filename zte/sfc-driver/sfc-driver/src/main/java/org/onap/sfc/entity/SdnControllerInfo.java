@@ -1,5 +1,5 @@
 /**
- * Copyright 2017 ZTE Corporation.
+ * Copyright 2016 ZTE Corporation.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.onap.sfc;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.onap.sfc.entity.PortChainReq4N;
-import org.onap.sfc.wrapper.N2sReqWrapper;
+package org.onap.sfc.entity;
 
-public class TestPortChain {
-    @Test
-    public void test_convertPortChain()
-    {
-        PortChainReq4N portChainReq4N = new PortChainReq4N();
-        portChainReq4N.setUrl("http://127.0.0.1:8181");
-        N2sReqWrapper.converPortChain(portChainReq4N);
+public class SdnControllerInfo {
+    String url;
+    String userName;
+    String password;
+
+    public String getUrl() {
+        return url;
     }
 
-    @Before
-    public void setupBeforeTest()
-    {
-
+    public void setUrl(String url) {
+        this.url = url;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

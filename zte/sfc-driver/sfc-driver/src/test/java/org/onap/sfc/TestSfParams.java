@@ -17,8 +17,8 @@ package org.onap.sfc;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.openo.sfc.entity.ChainParameter;
-import org.openo.sfc.utils.SfcDriverUtil;
+import org.onap.sfc.entity.ChainParameter;
+import org.onap.sfc.utils.SfcDriverUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

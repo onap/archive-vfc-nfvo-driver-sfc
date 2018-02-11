@@ -17,9 +17,9 @@ package org.onap.sfc;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.openo.sfc.entity.FlowClassfierReq4N;
-import org.openo.sfc.utils.SfcDriverUtil;
-import org.openo.sfc.wrapper.N2sReqWrapper;
+import org.onap.sfc.entity.FlowClassfierReq4N;
+import org.onap.sfc.utils.SfcDriverUtil;
+import org.onap.sfc.wrapper.N2sReqWrapper;
 
 public class TestFlowClassifier {
 
