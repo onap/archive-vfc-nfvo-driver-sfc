@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2016 ZTE Corporation.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.onap.sfc.entity;
 
 public class FlowClassfierReq4N {
@@ -21,11 +22,11 @@ public class FlowClassfierReq4N {
     private String name;
     private String description;
     private int dscp;
-    private String ip_proto;
-    private String source_port_range;
-    private String dest_port_range;
-    private String source_ip_range;
-    private String dest_ip_range;
+    private String ipProto;
+    private String sourcePortRange;
+    private String destPortRange;
+    private String sourceIpRange;
+    private String destIpRange;
 
     public String getUrl() {
         return url;
@@ -67,43 +68,43 @@ public class FlowClassfierReq4N {
         this.dscp = dscp;
     }
 
-    public String getIp_proto() {
-        return ip_proto;
+    public String getIpProto() {
+        return ipProto;
     }
 
-    public void setIp_proto(String ip_proto) {
-        this.ip_proto = ip_proto;
+    public void setIpProto(String ipProto) {
+        this.ipProto = ipProto;
     }
 
-    public String getSource_port_range() {
-        return source_port_range;
+    public String getSourcePortRange() {
+        return sourcePortRange;
     }
 
-    public void setSource_port_range(String source_port_range) {
-        this.source_port_range = source_port_range;
+    public void setSourcePortRange(String sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
     }
 
-    public String getDest_port_range() {
-        return dest_port_range;
+    public String getDestPortRange() {
+        return destPortRange;
     }
 
-    public void setDest_port_range(String dest_port_range) {
-        this.dest_port_range = dest_port_range;
+    public void setDestPortRange(String destPortRange) {
+        this.destPortRange = destPortRange;
     }
 
-    public String getSource_ip_range() {
-        return source_ip_range;
+    public String getSourceIpRange() {
+        return sourceIpRange;
     }
 
-    public void setSource_ip_range(String source_ip_range) {
-        this.source_ip_range = source_ip_range;
+    public void setSourceIpRange(String sourceIpRange) {
+        this.sourceIpRange = sourceIpRange;
     }
 
-    public String getDest_ip_range() {
-        return dest_ip_range;
+    public String getDestIpRange() {
+        return destIpRange;
     }
 
-    public void setDest_ip_range(String dest_ip_range) {
-        this.dest_ip_range = dest_ip_range;
+    public void setDestIpRange(String destIpRange) {
+        this.destIpRange = destIpRange;
     }
 }

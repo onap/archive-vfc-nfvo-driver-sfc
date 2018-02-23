@@ -66,7 +66,7 @@ public class N2sReqWrapper {
     public static FlowClassifierReq4S convertFlowClassfier(FlowClassfierReq4N flowClassfierReq4N) {
         ArrayList<FlowClassfierReq> flowClassifiers = new ArrayList();
         FlowClassfierReq flowClassfierReq = new FlowClassfierReq();
-        flowClassfierReq.setProtocol(flowClassfierReq4N.getIp_proto());
+        flowClassfierReq.setProtocol(flowClassfierReq4N.getIpProto());
 //        flowClassfierReq.setSourcePortRangeMin(Integer.parseInt(flowClassfierReq4N.
 //                getSource_port_range().split(",")[0]));
 //        flowClassfierReq.setSourcePortRangeMax(Integer.parseInt(flowClassfierReq4N.
@@ -75,8 +75,8 @@ public class N2sReqWrapper {
 //                flowClassfierReq4N.getDest_port_range().split(",")[0]));
 //        flowClassfierReq.setDestinationPortRangeMax(Integer.parseInt(
 //                flowClassfierReq4N.getDest_port_range().split(",")[1]));
-        flowClassfierReq.setDestinationIpRange(flowClassfierReq4N.getDest_ip_range());
-        flowClassfierReq.setSrcIpRange(flowClassfierReq4N.getSource_ip_range());
+        flowClassfierReq.setDestinationIpRange(flowClassfierReq4N.getDestIpRange());
+        flowClassfierReq.setSrcIpRange(flowClassfierReq4N.getSourceIpRange());
         flowClassfierReq.setIpDscp(flowClassfierReq4N.getDscp());
         flowClassfierReq.setUuid(SfcDriverUtil.generateUuid());
         flowClassifiers.add(flowClassfierReq);

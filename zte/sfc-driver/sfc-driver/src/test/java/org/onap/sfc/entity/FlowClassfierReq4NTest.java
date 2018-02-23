@@ -1,18 +1,19 @@
-/**
+/*
  * Copyright 2018 ZTE Corporation.
- * <p>
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * <p>
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.onap.sfc.entity;
 
 import org.junit.Before;
@@ -64,38 +65,38 @@ public class FlowClassfierReq4NTest {
     }
 
     @Test
-    public void getAndSetIp_proto() throws Exception {
-        String ip_proto = "ISIS";
-        flowClassfierReq4N.setIp_proto(ip_proto);
-        assert flowClassfierReq4N.getIp_proto().equals(ip_proto);
+    public void getAndSetIpProto() throws Exception {
+        String ipProto = "ISIS";
+        flowClassfierReq4N.setIpProto(ipProto);
+        assert flowClassfierReq4N.getIpProto().equals(ipProto);
     }
 
     @Test
-    public void getAndSetSource_port_range() throws Exception {
-        String source_port_range = "1-400";
-        flowClassfierReq4N.setSource_port_range(source_port_range);
-        assert flowClassfierReq4N.getSource_port_range().equals(source_port_range);
+    public void getAndSetSourcePortRange() throws Exception {
+        String sourcePortRange = "1-400";
+        flowClassfierReq4N.setSourcePortRange(sourcePortRange);
+        assert flowClassfierReq4N.getSourcePortRange().equals(sourcePortRange);
     }
 
     @Test
-    public void getAndSetDest_port_range() throws Exception {
-        String dest_port_range = "1-400";
-        flowClassfierReq4N.setDest_port_range(dest_port_range);
-        assert flowClassfierReq4N.getDest_port_range().equals(dest_port_range);
+    public void getAndSetDestPortRange() throws Exception {
+        String destPortRange = "1-400";
+        flowClassfierReq4N.setDestPortRange(destPortRange);
+        assert flowClassfierReq4N.getDestPortRange().equals(destPortRange);
     }
 
     @Test
-    public void getAndSetSource_ip_range() throws Exception {
-        String source_ip_range = "0.0.0.0-1.1.1.1";
-        flowClassfierReq4N.setSource_ip_range(source_ip_range);
-        assert flowClassfierReq4N.getSource_ip_range().equals(source_ip_range);
+    public void getAndSetSourceIpRange() throws Exception {
+        String sourceIpRange = "0.0.0.0-1.1.1.1";
+        flowClassfierReq4N.setSourceIpRange(sourceIpRange);
+        assert flowClassfierReq4N.getSourceIpRange().equals(sourceIpRange);
     }
 
     @Test
-    public void getAndSetDest_ip_range() throws Exception {
-        String dest_ip_range = "0.0.0.0-1.1.1.1";
-        flowClassfierReq4N.setDest_ip_range(dest_ip_range);
-        assert flowClassfierReq4N.getDest_ip_range().equals(dest_ip_range);
+    public void getAndSetDestIpRange() throws Exception {
+        String destIpRange = "0.0.0.0-1.1.1.1";
+        flowClassfierReq4N.setDestIpRange(destIpRange);
+        assert flowClassfierReq4N.getDestIpRange().equals(destIpRange);
     }
 
 }
