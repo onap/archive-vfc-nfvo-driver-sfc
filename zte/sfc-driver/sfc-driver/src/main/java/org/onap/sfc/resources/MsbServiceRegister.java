@@ -51,8 +51,8 @@ public class MsbServiceRegister implements Runnable {
                 flag = true;
                 break;
             } catch (Exception e) {
-                LOGGER.info("Register Msb failed");
-                e.printStackTrace();
+                LOGGER.error("Register Msb failed",e);
+                //e.printStackTrace();
                 threadSleep(30000);
             }
         }
