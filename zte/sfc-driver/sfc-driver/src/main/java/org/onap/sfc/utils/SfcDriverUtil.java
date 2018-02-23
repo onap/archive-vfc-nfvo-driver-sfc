@@ -28,9 +28,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 public class SfcDriverUtil {
-
+    public Log log = LogFactory.getLog(SfcDriverUtil.class);
     public static String generateUuid() {
         return UUID.randomUUID().toString();
 
@@ -95,9 +97,10 @@ public class SfcDriverUtil {
     {
         try {
             InetAddress addr = InetAddress.getLocalHost();
-            return addr.getHostAddress().toString();
+            return addr.getHostAddress();
         } catch (UnknownHostException e) {
             e.printStackTrace();
+            //log.error("getLocalIp StackTrace:", e);
         }
         return "";
     }
