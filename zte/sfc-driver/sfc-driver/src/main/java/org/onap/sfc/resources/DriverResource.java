@@ -62,7 +62,7 @@ public class DriverResource {
     public Result createPortPair(PortPairReq4N portPairReq4N)
             throws Exception {
         if (portPairReq4N == null) {
-            throw new NotFoundException("SdnControllerInfo is null");
+            throw new NotFoundException("portPairReq4N is null");
         }
         LOGGER.info(SfcDriverUtil.toJson(portPairReq4N));
         PortPairReq4S portPairReq = N2sReqWrapper.convertPortPair(portPairReq4N);
@@ -86,7 +86,7 @@ public class DriverResource {
     public Result createPortPairGroup(PortPairGroupReq4N portPairGroupReq4N)
             throws Exception {
         if (portPairGroupReq4N == null) {
-            throw new NotFoundException("SdnControllerInfo is null");
+            throw new NotFoundException("portPairGroupReq4N is null");
         }
         LOGGER.info(SfcDriverUtil.toJson(portPairGroupReq4N));
         PortPairGroupReq4S portPairGroupReq4S = N2sReqWrapper.convertPortPairGroup(portPairGroupReq4N);
