@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_c8aaa784",
+        "filename": "zte/sfc-driver/sfc-driver/src/main/java/org/onap/sfc/utils/SfcDriverUtil.java",
+        "patchSetId": 8
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 925
+      },
+      "writtenOn": "2018-03-02T02:01:12Z",
+      "side": 1,
+      "message": "The log variable should be a static variable , so that it can be referenced by a static methode",
+      "range": {
+        "startLine": 35,
+        "startChar": 11,
+        "endLine": 35,
+        "endChar": 14
+      },
+      "revId": "0825193dc817a25af1805f0c8485572f3d6438be",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
