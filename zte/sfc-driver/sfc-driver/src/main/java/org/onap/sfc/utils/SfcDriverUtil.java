@@ -32,7 +32,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 public class SfcDriverUtil {
-    public static Log log = LogFactory.getLog(SfcDriverUtil.class);
+    private static final Log log = LogFactory.getLog(SfcDriverUtil.class);
     public static String generateUuid() {
         return UUID.randomUUID().toString();
 
