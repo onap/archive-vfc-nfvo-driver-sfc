@@ -63,8 +63,8 @@ public class MsbServiceRegister implements Runnable {
         LOGGER.info("start sleep ....");
         try {
             Thread.sleep(second);
-        } catch (InterruptedException error) {
-            LOGGER.error("thread sleep error.errorMsg:" + error.getMessage());
+        } catch (Exception e) {
+            LOGGER.error("thread sleep error.errorMsg:", e);
         }
         LOGGER.info("sleep end .");
     }
