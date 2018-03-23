@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a93c517_641c80c2",
+        "filename": "zte/sfc-driver/plugin-standalone/src/main/assembly/run.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1337
+      },
+      "writtenOn": "2018-03-23T09:24:50Z",
+      "side": 1,
+      "message": "Suggest to remove the spaces here.",
+      "range": {
+        "startLine": 37,
+        "startChar": 84,
+        "endLine": 37,
+        "endChar": 85
+      },
+      "revId": "0a65a3fc5fc9798b68f427b1632cd63c4a79804b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
