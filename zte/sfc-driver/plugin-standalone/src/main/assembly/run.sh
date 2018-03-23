@@ -34,7 +34,7 @@ if [ $JAVA_VERSION = "1.8" ]
 then
     JAVA_OPTS="-Xms16m -Xmx128m -XX:+UseSerialGC -XX:MaxMetaspaceSize=64m -XX:NewRatio=2"
 else
-    JAVA_OPTS="-Xms16m -Xmx128m -XX:+UseSerialGC -XX:MaxPermSize=64m -XX:NewRatio=2"	
+    JAVA_OPTS="-Xms16m -Xmx128m -XX:+UseSerialGC -XX:MaxPermSize=64m -XX:NewRatio=2"
 fi
 port=8779
 #JAVA_OPTS="$JAVA_OPTS -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,address=$port,server=y,suspend=n"
@@ -43,6 +43,6 @@ echo @JAVA_OPTS@ $JAVA_OPTS
 class_path="$RUNHOME/:$RUNHOME/sfc-service.jar"
 echo @class_path@ $class_path
 
-"$JAVA" $JAVA_OPTS -classpath "$class_path"  SfcDriver server "$RUNHOME/conf/console.yml"
+"$JAVA" $JAVA_OPTS -classpath "$class_path"  org.onap.sfc.SfcDriver server "$RUNHOME/conf/console.yml"
 
 
