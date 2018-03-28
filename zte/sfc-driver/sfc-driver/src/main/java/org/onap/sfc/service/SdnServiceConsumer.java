@@ -22,16 +22,17 @@ import org.glassfish.jersey.client.ClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 
 public class SdnServiceConsumer {
     private static final Logger logger = LoggerFactory.getLogger(SdnServiceConsumer.class.getName());
 
-    public static ISdnControllerService getSdnConProxy(String url) throws Exception {
+    public static ISdnControllerService getSdnConProxy(String url) throws IOException {
         return ConsumerFactory.createConsumer(url, new ClientConfig().register(JacksonJsonProvider.class),
                 ISdnControllerService.class);
     }
 
-    public static MsbService getMsbRegisterService(String url) throws Exception {
+    public static MsbService getMsbRegisterService(String url) throws IOException {
         return ConsumerFactory.createConsumer(url, new ClientConfig().register(JacksonJsonProvider.class),
                 MsbService.class);
     }

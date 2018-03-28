@@ -23,6 +23,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import java.io.IOException;
 
 @Path("/api/microservices/v1/services")
 public interface MsbService {
@@ -31,5 +32,5 @@ public interface MsbService {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public MsbRegisterEntity registerServce(@QueryParam("createOrUpdate") String createOrUpdate,
-                                            MsbRegisterEntity entity)throws Exception;
+                                            MsbRegisterEntity entity)throws IOException;
 }

@@ -28,7 +28,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
+import java.io.IOException;
 
 @Path("/restconf/config/neutron:neutron")
 public interface ISdnControllerService {
@@ -36,52 +36,52 @@ public interface ISdnControllerService {
     @Path("/")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Result querySdnController() throws Exception;
+    public Result querySdnController() throws IOException;
 
     @Path("/port-pairs")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createPortPair(@HeaderParam("Authorization") String authorization, String portPairReq4S) throws Exception;
+    public Response createPortPair(@HeaderParam("Authorization") String authorization, String portPairReq4S) throws IOException;
 
     @Path("/port-pair-groups")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createPortPairGroup(@HeaderParam("Authorization") String authorization, String ppg4S) throws Exception;
+    public Response createPortPairGroup(@HeaderParam("Authorization") String authorization, String ppg4S) throws IOException;
 
     @Path("/sfc-flow-classifiers")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createFlowCla(@HeaderParam("Authorization") String authorization, String flowClassfierReq) throws Exception;
+    public Response createFlowCla(@HeaderParam("Authorization") String authorization, String flowClassfierReq) throws IOException;
 
 
     @Path("/port-chains")
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response createPortChain(@HeaderParam("Authorization") String authorization, String portChainReq4S) throws Exception;
+    public Response createPortChain(@HeaderParam("Authorization") String authorization, String portChainReq4S) throws IOException;
 
     @Path("/port-pairs/port-pair/{id}")
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deletePortPair(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws Exception;
+    public Response deletePortPair(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws IOException;
 
 
     @Path("/port-pair-groups/port-pair-group/{id}")
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deletePortPairGroup(@HeaderParam("Authorization") String authorization, @PathParam("id") String uuid) throws Exception;
+    public Response deletePortPairGroup(@HeaderParam("Authorization") String authorization, @PathParam("id") String uuid) throws IOException;
 
     @Path("/sfc-flow-classifiers/sfc-flow-classifier/{id}")
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteFlowClassifiers(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws Exception;
+    public Response deleteFlowClassifiers(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws IOException;
 
     @Path("/port-chains/port-chain/{id}")
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deletePortChain(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws Exception;
+    public Response deletePortChain(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws IOException;
 
 }
