@@ -33,6 +33,7 @@ import org.onap.sfc.entity.portpair.PortPairReq4S;
 import org.onap.sfc.entity.portpair.ServiceFunctionParameter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class N2sReqWrapper {
@@ -64,7 +65,7 @@ public class N2sReqWrapper {
     }
 
     public static FlowClassifierReq4S convertFlowClassfier(FlowClassfierReq4N flowClassfierReq4N) {
-        ArrayList<FlowClassfierReq> flowClassifiers = new ArrayList();
+        List<FlowClassfierReq> flowClassifiers = new ArrayList();
         FlowClassfierReq flowClassfierReq = new FlowClassfierReq();
         flowClassfierReq.setProtocol(flowClassfierReq4N.getIpProto());
 //        flowClassfierReq.setSourcePortRangeMin(Integer.parseInt(flowClassfierReq4N.

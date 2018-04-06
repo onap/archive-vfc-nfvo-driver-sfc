@@ -17,18 +17,19 @@ package org.onap.sfc.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class PortChainReq4S {
 
-    public ArrayList<PortChainReq> getPortChainReqs() {
+    @SerializedName("port-chain")
+    List<PortChainReq> portChainReqs;
+
+    public List<PortChainReq> getPortChainReqs() {
         return portChainReqs;
     }
 
-    public void setPortChainReqs(ArrayList<PortChainReq> portChainReqs) {
+    public void setPortChainReqs(List<PortChainReq> portChainReqs) {
         this.portChainReqs = portChainReqs;
     }
 
-    @SerializedName("port-chain")
-    ArrayList<PortChainReq> portChainReqs;
 }

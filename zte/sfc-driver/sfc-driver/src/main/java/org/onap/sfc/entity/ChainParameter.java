@@ -19,16 +19,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class ChainParameter {
     @SerializedName("chain-parameter")
-    private String chainParameter;
+    private String chainParam;//A field should not duplicate the name of its containing class
     @SerializedName("chain-parameter-value")
     private String chainParamValue;
 
     public String getChainParameter() {
-        return chainParameter;
+        return chainParam;
     }
 
-    public void setChainParameter(String chainParameter) {
-        this.chainParameter = chainParameter;
+    public void setChainParameter(String inChainParameter) {
+        this.chainParam = inChainParameter;
     }
 
     public String getChainParamValue() {

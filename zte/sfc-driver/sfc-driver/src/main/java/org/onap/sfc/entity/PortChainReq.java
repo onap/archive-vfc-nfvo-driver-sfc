@@ -18,23 +18,24 @@ package org.onap.sfc.entity;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class PortChainReq {
     @SerializedName("port-pair-groups")
-    private ArrayList<String> portPairGroups;
+    private List<String> portPairGroups;
     @SerializedName("flow-classifiers")
-    private ArrayList<String> flowClassifiers;
+    private List<String> flowClassifiers;
     private String uuid;
     @SerializedName("chain-parameters")
-    private ArrayList<ChainParameter> chainParams;
+    private List<ChainParameter> chainParams;
 
 
-    public ArrayList<ChainParameter> getChainParams() {
+    public List<ChainParameter> getChainParams() {
         return chainParams;
     }
 
-    public void setChainParams(ArrayList<ChainParameter> chainParams) {
+    public void setChainParams(List<ChainParameter> chainParams) {
         this.chainParams = chainParams;
     }
 
@@ -47,21 +48,19 @@ public class PortChainReq {
         this.uuid = uuid;
     }
 
-    private Map chainParameters;
-
-    public ArrayList<String> getPortPairGroups() {
+    public List<String> getPortPairGroups() {
         return portPairGroups;
     }
 
-    public void setPortPairGroups(ArrayList<String> portPairGroups) {
+    public void setPortPairGroups(List<String> portPairGroups) {
         this.portPairGroups = portPairGroups;
     }
 
-    public ArrayList<String> getFlowClassifiers() {
+    public List<String> getFlowClassifiers() {
         return flowClassifiers;
     }
 
-    public void setFlowClassifiers(ArrayList<String> flowClassifiers) {
+    public void setFlowClassifiers(List<String> flowClassifiers) {
         this.flowClassifiers = flowClassifiers;
     }
 }

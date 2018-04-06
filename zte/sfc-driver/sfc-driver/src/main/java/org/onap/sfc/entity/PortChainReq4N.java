@@ -13,17 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.onap.sfc.entity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PortChainReq4N {
     private String sdnControllerId;
     private String url;
     private String name;
     private String description;
-    private ArrayList<String> flowClassifiers;
-    private ArrayList<String> portPairGroups;
+    private List<String> flowClassifiers;
+    private List<String> portPairGroups;
     private boolean symmetric;
 
     public String getUrl() {
@@ -58,19 +60,19 @@ public class PortChainReq4N {
         this.description = description;
     }
 
-    public ArrayList<String> getFlowClassifiers() {
+    public List<String> getFlowClassifiers() {
         return flowClassifiers;
     }
 
-    public void setFlowClassifiers(ArrayList<String> flowClassifiers) {
+    public void setFlowClassifiers(List<String> flowClassifiers) {
         this.flowClassifiers = flowClassifiers;
     }
 
-    public ArrayList<String> getPortPairGroups() {
+    public List<String> getPortPairGroups() {
         return portPairGroups;
     }
 
-    public void setPortPairGroups(ArrayList<String> portPairGroups) {
+    public void setPortPairGroups(List<String> portPairGroups) {
         this.portPairGroups = portPairGroups;
     }
 

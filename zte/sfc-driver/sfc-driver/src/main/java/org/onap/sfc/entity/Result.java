@@ -16,6 +16,13 @@
 package org.onap.sfc.entity;
 
 public class Result {
+
+    private String id;
+
+    public Result(String uuid) {
+        this.id = uuid;
+    }
+
     public String getId() {
         return id;
     }
@@ -24,9 +31,4 @@ public class Result {
         this.id = id;
     }
 
-    private String id;
-
-    public Result(String uuid) {
-        this.id = uuid;
-    }
 }

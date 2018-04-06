@@ -18,18 +18,18 @@ package org.onap.sfc.entity;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FlowClassifierReq4S {
-    public ArrayList<FlowClassfierReq> getSfcFlowClassifier() {
+
+    @SerializedName("sfc-flow-classifier")
+    List<FlowClassfierReq> sfcFlowClassifier;
+
+    public List<FlowClassfierReq> getSfcFlowClassifier() {
         return sfcFlowClassifier;
     }
 
-    public void setSfcFlowClassifier(ArrayList<FlowClassfierReq> sfcFlowClassifier) {
+    public void setSfcFlowClassifier(List<FlowClassfierReq> sfcFlowClassifier) {
         this.sfcFlowClassifier = sfcFlowClassifier;
     }
-
-    @SerializedName("sfc-flow-classifier")
-    ArrayList<FlowClassfierReq> sfcFlowClassifier;
-
-
 }

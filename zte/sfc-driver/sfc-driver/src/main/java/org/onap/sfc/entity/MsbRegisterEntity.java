@@ -18,6 +18,7 @@ package org.onap.sfc.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MsbRegisterEntity {
@@ -26,7 +27,7 @@ public class MsbRegisterEntity {
     private String url;
     private String protocol;
     private String visualRange;
-    private ArrayList<NodeEntity> nodes;
+    private List<NodeEntity> nodes;
 
     public String getServiceName() {
         return serviceName;
@@ -68,11 +69,11 @@ public class MsbRegisterEntity {
         this.visualRange = visualRange;
     }
 
-    public ArrayList<NodeEntity> getNodes() {
+    public List<NodeEntity> getNodes() {
         return nodes;
     }
 
-    public void setNodes(ArrayList<NodeEntity> nodes) {
+    public void setNodes(List<NodeEntity> nodes) {
         this.nodes = nodes;
     }
 }
