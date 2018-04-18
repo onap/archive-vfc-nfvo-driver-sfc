@@ -26,6 +26,7 @@ msbServiceUrl: http://127.0.0.1:80
 #  connector:
 #    type: http
 #    port: 8080
+serviceIp: 127.0.0.1
 
 server:
   type: simple

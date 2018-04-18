@@ -30,6 +30,9 @@ public class SfcDriverConfig extends Configuration {
 
     @NotEmpty
     private String msbServiceUrl;
+    
+    @NotEmpty
+    private String serviceIp;
 
     @JsonProperty
     public String getTemplate() {
@@ -56,6 +59,16 @@ public class SfcDriverConfig extends Configuration {
 
     public void setMsbServiceUrl(String msbServiceUrl) {
         this.msbServiceUrl = msbServiceUrl;
+    }
+    
+    @JsonProperty
+    public String getServiceIp() {
+        return serviceIp;
+    }
+    
+    @JsonProperty
+    public void setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
     }
 
 }
