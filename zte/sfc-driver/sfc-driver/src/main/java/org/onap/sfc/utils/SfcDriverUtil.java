@@ -20,7 +20,7 @@ import org.onap.sfc.entity.ChainParameter;
 import org.onap.sfc.entity.MsbRegisterEntity;
 import org.onap.sfc.entity.NodeEntity;
 import org.onap.sfc.entity.portpair.ServiceFunctionParameter;
-
+import org.onap.sfc.service.ConfigInfo;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -85,7 +85,7 @@ public class SfcDriverUtil {
         entity.setVisualRange("1");
         ArrayList<NodeEntity> nodes = new ArrayList<NodeEntity>();
         NodeEntity node = new NodeEntity();
-        node.setIp(getLocalIp());
+        node.setIp(ConfigInfo.getConfig().getServiceIp());
         node.setPort("8411");
         node.setTtl("1");
         nodes.add(node);
