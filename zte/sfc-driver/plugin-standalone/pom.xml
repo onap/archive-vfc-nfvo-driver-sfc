@@ -27,7 +27,7 @@
     <name>vfc/nfvo/driver/sfc/zte/sfc-driver/plugin-standalone</name>
     <packaging>pom</packaging>
     <version>1.1.0-SNAPSHOT</version>
-    
+
     <dependencies>
         <dependency>
         <groupId>org.onap.vfc.nfvo.driver.sfc.zte.sfc-driver</groupId>
@@ -35,12 +35,12 @@
         <version>${project.version}</version>
         </dependency>
     </dependencies>
-    
+
     <properties>
         <packagename>sfc-driver</packagename>
     </properties>  
 	<build>
-	
+
 	<plugins>    
     <plugin>
     <artifactId>maven-resources-plugin</artifactId>
@@ -61,12 +61,12 @@
                 <include>**/*</include>
               </includes>
             </resource>   
-      
+
           </resources>
           <overwrite>true</overwrite>
         </configuration>
       </execution>
-      
+
     </executions>
   </plugin>
              <plugin>
@@ -153,7 +153,7 @@
        </execution>            
    </executions>   
 </plugin>-->
- 
+
 
         </plugins>
     </build>

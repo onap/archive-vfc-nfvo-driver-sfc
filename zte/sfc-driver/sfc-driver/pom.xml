@@ -52,7 +52,7 @@
             <artifactId>jersey-container-servlet-core</artifactId>
             <version>${jersey.version}</version>
         </dependency>
-		
+
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
@@ -118,14 +118,14 @@
             <artifactId>gson</artifactId>
             <version>2.2.4</version>
         </dependency>
-		
+
     <dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
          <version>${junit.version}</version>
          <scope>test</scope>
     </dependency>
-  
+
 	<dependency>
 		<groupId>org.powermock</groupId>
 		<artifactId>powermock-module-junit4</artifactId>
