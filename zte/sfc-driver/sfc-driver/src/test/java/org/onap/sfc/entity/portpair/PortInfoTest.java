@@ -49,6 +49,8 @@ public class PortInfoTest {
     public void equals() throws Exception {
         assert !portInfo2.equals(portInfo1);
         assert portInfo2.equals(portInfo2);
+        assert portInfo2.hashCode() == portInfo2.hashCode();
+        assert portInfo2.hashCode() != portInfo1.hashCode();
     }
 
     @Test

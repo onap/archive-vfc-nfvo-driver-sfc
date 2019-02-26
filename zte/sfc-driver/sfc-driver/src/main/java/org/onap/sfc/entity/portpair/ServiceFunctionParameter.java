@@ -31,4 +31,8 @@ public class ServiceFunctionParameter {
         }
         return false;
     }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

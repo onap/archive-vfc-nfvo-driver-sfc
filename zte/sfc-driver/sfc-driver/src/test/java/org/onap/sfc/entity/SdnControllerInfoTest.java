@@ -46,6 +46,8 @@ public class SdnControllerInfoTest {
     public void equals() throws Exception {
         assert !entity2.equals(entity1);
         assert entity2.equals(entity2);
+        assert entity2.hashCode() == entity2.hashCode();
+        assert entity2.hashCode() != entity1.hashCode();
     }
 
     @Test

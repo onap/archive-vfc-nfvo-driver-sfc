@@ -34,4 +34,8 @@ public class PortInfo {
         }
         return false;
     }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

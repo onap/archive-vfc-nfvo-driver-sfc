@@ -30,4 +30,8 @@ public class SdnControllerInfo {
         }
         return false;
     }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

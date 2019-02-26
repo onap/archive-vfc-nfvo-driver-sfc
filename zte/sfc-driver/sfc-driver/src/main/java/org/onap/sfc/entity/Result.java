@@ -33,4 +33,8 @@ public class Result {
         return false;
     }
 
+    public int hashCode() {
+        return super.hashCode();
+    }
+
 }

@@ -31,4 +31,8 @@ public class NodeEntity {
         }
         return false;
     }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

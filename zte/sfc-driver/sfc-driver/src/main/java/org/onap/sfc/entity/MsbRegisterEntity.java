@@ -36,4 +36,8 @@ public class MsbRegisterEntity {
         }
         return false;
     }
+
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

@@ -61,12 +61,8 @@ public class MsbRegisterEntityTest {
     public void equals() throws Exception {
         assert !entity2.equals(entity1);
         assert entity2.equals(entity2);
-/*        MsbRegisterEntity entity = new MsbRegisterEntity();
-        assert entity2.equals(entity1);
-        assert entity2.equals(entity2);
-        assert !entity2.equals(null);
-        assert !entity.equals(entity2);
-        assert !entity2.equals(entity);*/
+        assert entity2.hashCode() == entity2.hashCode();
+        assert entity2.hashCode() != entity1.hashCode();
     }
 
     @Test
