@@ -18,44 +18,13 @@ package org.onap.sfc.entity.portpair;
 
 
 import com.google.gson.annotations.SerializedName;
+import lombok.Data;
 
+@Data
 public class PortInfo {
     private String encapsulation;
     private String ip;
     private String mac;
     @SerializedName("port-name")
     private String portName;
-
-    public String getEncapsulation() {
-        return encapsulation;
-    }
-
-
-    public String getPortName() {
-        return portName;
-    }
-
-    public void setPortName(String portName) {
-        this.portName = portName;
-    }
-
-    public void setEncapsulation(String encapsulation) {
-        this.encapsulation = encapsulation;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getMac() {
-        return mac;
-    }
-
-    public void setMac(String mac) {
-        this.mac = mac;
-    }
 }

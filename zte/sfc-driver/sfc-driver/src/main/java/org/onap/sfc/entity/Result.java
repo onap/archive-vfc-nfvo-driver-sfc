@@ -15,20 +15,15 @@
  */
 package org.onap.sfc.entity;
 
+import lombok.Data;
+
+@Data
 public class Result {
 
     private String id;
 
     public Result(String uuid) {
         this.id = uuid;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
 }

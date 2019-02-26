@@ -16,26 +16,12 @@
 package org.onap.sfc.entity.portpair;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.Data;
 
+@Data
 public class ServiceFunctionParameter {
     @SerializedName("service-function-parameter")
     private String serviceFunctionParamter;
     @SerializedName("service-function-parameter-value")
     private String getServiceFunctionParamterValue;
-
-    public String getServiceFunctionParamter() {
-        return serviceFunctionParamter;
-    }
-
-    public void setServiceFunctionParamter(String serviceFunctionParamter) {
-        this.serviceFunctionParamter = serviceFunctionParamter;
-    }
-
-    public String getGetServiceFunctionParamterValue() {
-        return getServiceFunctionParamterValue;
-    }
-
-    public void setGetServiceFunctionParamterValue(String getServiceFunctionParamterValue) {
-        this.getServiceFunctionParamterValue = getServiceFunctionParamterValue;
-    }
 }

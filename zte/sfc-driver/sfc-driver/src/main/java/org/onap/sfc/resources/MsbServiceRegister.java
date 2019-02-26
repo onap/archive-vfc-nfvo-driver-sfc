@@ -15,6 +15,7 @@
  */
 package org.onap.sfc.resources;
 
+import lombok.Setter;
 import org.onap.sfc.utils.SfcDriverUtil;
 import org.onap.sfc.entity.MsbRegisterEntity;
 import org.onap.sfc.service.ConfigInfo;
@@ -25,6 +26,13 @@ import org.slf4j.LoggerFactory;
 public class MsbServiceRegister implements Runnable {
     private final Logger LOGGER = LoggerFactory.getLogger(MsbServiceRegister.class);
     MsbRegisterEntity entity;
+
+    @Setter
+    private int sleepSeconds = 30000;
+
+    @Setter
+    private int retry = 20;
+
     public MsbServiceRegister()
     {
         initInfo();
@@ -40,7 +48,7 @@ public class MsbServiceRegister implements Runnable {
     public void run() {
         boolean flag = false;
         int retryTimes=0;
-        while (!flag && retryTimes<20)
+        while (!flag && retryTimes< retry)
         {
             try {
                 LOGGER.info("Register Msb start:");
@@ -53,7 +61,8 @@ public class MsbServiceRegister implements Runnable {
             } catch (Exception e) {
                 LOGGER.error("Register Msb failed",e);
                 //e.printStackTrace();
-                threadSleep(30000);
+                threadSleep(sleepSeconds);
+                retryTimes++;
             }
         }
 

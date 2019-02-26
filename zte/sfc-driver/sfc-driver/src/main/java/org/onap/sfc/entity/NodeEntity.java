@@ -16,34 +16,12 @@
 package org.onap.sfc.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Data
 public class NodeEntity {
     private String ip;
     private String port;
     private String ttl;
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getPort() {
-        return port;
-    }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    public String getTtl() {
-        return ttl;
-    }
-
-    public void setTtl(String ttl) {
-        this.ttl = ttl;
-    }
 }
