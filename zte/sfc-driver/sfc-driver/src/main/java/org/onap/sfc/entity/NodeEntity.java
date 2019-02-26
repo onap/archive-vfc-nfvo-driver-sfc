@@ -24,4 +24,11 @@ public class NodeEntity {
     private String ip;
     private String port;
     private String ttl;
+
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
 }

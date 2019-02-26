@@ -29,4 +29,11 @@ public class MsbRegisterEntity {
     private String protocol;
     private String visualRange;
     private List<NodeEntity> nodes;
+
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
 }

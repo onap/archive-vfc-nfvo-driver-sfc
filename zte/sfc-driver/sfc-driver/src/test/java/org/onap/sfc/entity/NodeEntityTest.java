@@ -18,21 +18,28 @@ import org.junit.Test;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class ResultTest {
-    Result entity1;
-    Result entity2;
+public class NodeEntityTest {
+    NodeEntity entity1;
+    NodeEntity entity2;
 
     @Before
     public void setUp() throws Exception {
-        entity1 = new Result("");
-        entity2 = new Result("");
+        entity1 = new NodeEntity();
+        entity1.setIp("");
+        entity1.setPort("");
+        entity1.setTtl("");
+
+        entity2 = new NodeEntity();
+        entity2.setIp("");
+        entity2.setPort("");
+        entity2.setTtl("");
     }
 
     @Test
-    public void getId() throws Exception {
-        String uuid = "123";
-        Result result = new Result(uuid);
-        assert result.getId().equals(uuid);
+    public void test() throws Exception {
+        assert entity2.getIp().equals(entity1.getIp());
+        assert entity2.getPort().equals(entity1.getPort());
+        assert entity2.getTtl().equals(entity1.getTtl());
     }
 
     @Test
@@ -45,4 +52,5 @@ public class ResultTest {
     public void toStringTest() throws Exception {
         assert entity2.toString() != null;
     }
+
 }

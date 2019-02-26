@@ -1,4 +1,4 @@
-package org.onap.sfc.entity;
+package org.onap.sfc.entity.portpair;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,21 +18,25 @@ import org.junit.Test;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-public class ResultTest {
-    Result entity1;
-    Result entity2;
+public class ServiceFunctionParameterTest {
+    ServiceFunctionParameter entity1;
+    ServiceFunctionParameter entity2;
 
     @Before
     public void setUp() throws Exception {
-        entity1 = new Result("");
-        entity2 = new Result("");
+        entity1 = new ServiceFunctionParameter();
+        entity1.setGetServiceFunctionParamterValue("");
+        entity1.setServiceFunctionParamter("");
+
+        entity2 = new ServiceFunctionParameter();
+        entity2.setGetServiceFunctionParamterValue("");
+        entity2.setServiceFunctionParamter("");
     }
 
     @Test
-    public void getId() throws Exception {
-        String uuid = "123";
-        Result result = new Result(uuid);
-        assert result.getId().equals(uuid);
+    public void test() throws Exception {
+        assert entity2.getGetServiceFunctionParamterValue().equals(entity1.getGetServiceFunctionParamterValue());
+        assert entity2.getServiceFunctionParamter().equals(entity1.getServiceFunctionParamter());
     }
 
     @Test
@@ -45,4 +49,5 @@ public class ResultTest {
     public void toStringTest() throws Exception {
         assert entity2.toString() != null;
     }
+
 }

@@ -27,4 +27,11 @@ public class PortInfo {
     private String mac;
     @SerializedName("port-name")
     private String portName;
+
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -24,4 +24,11 @@ public class ServiceFunctionParameter {
     private String serviceFunctionParamter;
     @SerializedName("service-function-parameter-value")
     private String getServiceFunctionParamterValue;
+
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
 }

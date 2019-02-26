@@ -26,4 +26,11 @@ public class Result {
         this.id = uuid;
     }
 
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
+
 }

@@ -23,4 +23,11 @@ public class SdnControllerInfo {
     String url;
     String userName;
     String password;
+
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        return false;
+    }
 }
