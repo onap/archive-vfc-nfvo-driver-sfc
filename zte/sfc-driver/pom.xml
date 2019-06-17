@@ -32,5 +32,4 @@
         <module>sfc-driver</module>
         <module>plugin-standalone</module>
       </modules>
-
 </project>
