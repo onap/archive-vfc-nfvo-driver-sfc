@@ -55,6 +55,7 @@ logging:
       timeZone: UTC
       logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
     - type: file
+      maxFileSize: 100MB
       threshold: INFO
       logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
       currentLogFilename: ./logs/application.log
