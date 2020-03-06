@@ -1,0 +1,10 @@
+distribution_type: 'container'
+container_release_tag: '1.3.1'
+project: 'vfc-nfvo-driver-sfc'
+container_pull_registry: nexus3.onap.org:10003
+container_push_registry: nexus3.onap.org:10002
+log_dir: 'vfc-nfvo-driver-sfc-master-docker-java-version-shell-daily/939/'
+ref: 'edbd7537bce2b543ccd0f4c1d042e623b75650ae'
+containers:
+    - name: 'vfc/ztesdncdriver'
+      version: '1.3.1-STAGING-20200305T133046'
